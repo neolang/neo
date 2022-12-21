@@ -1,0 +1,3 @@
+print('Coming soon', 'NeoLang', 'v0.1.0');
+
+//Coming soon NeoLang v0.1.0
