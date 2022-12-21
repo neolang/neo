@@ -1,4 +1,4 @@
-*.n linguist-language=NEO text=auto eol=lf
+*.n linguist-language=N text=auto eol=lf
 *.v linguist-language=V text=auto eol=lf
 *.m linguist-language=NEO text=auto eol=lf
 *.vsh linguist-language=V text=auto eol=lf
