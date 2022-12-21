@@ -1,0 +1,9 @@
+*.n linguist-language=NEO text=auto eol=lf
+*.v linguist-language=V text=auto eol=lf
+*.m linguist-language=NEO text=auto eol=lf
+*.vsh linguist-language=V text=auto eol=lf
+*.nsh linguist-language=NEO text=auto eol=lf
+**/neo.mod linguist-language=NEO text=auto eol=lf
+*.bat text=auto eol=crlf
+ Dockerfile.* linguist-language=Dockerfile
+*.toml text eol=lf
