@@ -1,5 +1,5 @@
 *.n linguist-detectable=true
-*.n linguist-language=NEO
+*.* linguist-language=NEO
 *.n linguist-language=NEO text=auto eol=lf
 *.v linguist-language=V text=auto eol=lf
 *.m linguist-language=NEO text=auto eol=lf
