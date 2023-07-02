@@ -1,0 +1,5 @@
+fn main() {
+    mut num := [5, 3, 1, 0, 2, 4] // random int as array
+    num.sort() // default `builtin string` sort
+    println(num) // see sorted: [0, 1, 2, 3, 4, 5]
+}

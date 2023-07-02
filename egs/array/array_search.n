@@ -1,0 +1,8 @@
+fn main() {
+    // value in array returns true if the array contains value
+    names := ['Masud', 'Nishe', 'Raiyan']
+
+    println('Sifat' in names)   // "false"
+    println('raiyan' in names)  // "false" not exact matched
+    println('Raiyan' in names)  // "true"
+}

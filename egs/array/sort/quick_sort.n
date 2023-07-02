@@ -1,0 +1,79 @@
+import rand
+
+const (
+	gen_len = 100 // set count of random number generate
+	gen_max = 1000 // max count of number generate
+	insertion_sort_threshold = 10 // Threshold for using insertion sort
+)
+
+fn main() {
+    mut arr := []int{} // new slice with no initial elements
+    for _ in 0 .. gen_len { // for loop to generate random numbers 100 <-> 1000
+        arr << rand.intn(gen_max) or { 0 } // generating random 100 number (0 -> 1000)
+    }
+    println('Random array length is: ${arr.len}') // see length of array that generated above (100)
+    println('Is `quick` sorted: no | ${is_sorted[int](arr)}') // if not sorted then result will: false
+    quick_sort[int](mut arr, 0, arr.len - 1) // sorting now
+    println('Is now `quick` sorted: yes | ${is_sorted[int](arr)}') // sorted, so result will: true
+    println('') // just for new line to looks better
+    println(arr) // see sorted array output
+}
+
+// quick sorting function
+fn quick_sort[T](mut arr []T, l int, r int) {
+    if r - l <= insertion_sort_threshold {
+        insertion_sort[T](mut arr, l, r)
+        return
+    }
+
+    // Choose a good pivot to minimize worst-case scenarios
+    pivot_index := choose_pivot[T](mut arr, l, r)
+    arr[l], arr[pivot_index] = arr[pivot_index], arr[l]
+    mut sep := l
+    for i in l + 1 .. r + 1 {
+        if arr[i] < arr[l] {
+            sep++
+            arr[i], arr[sep] = arr[sep], arr[i]
+        }
+    }
+    arr[l], arr[sep] = arr[sep], arr[l]
+    quick_sort[T](mut arr, l, sep - 1)
+    quick_sort[T](mut arr, sep + 1, r)
+}
+
+// sort helper to do insertion threshold
+fn insertion_sort[T](mut arr []T, l int, r int) {
+    for i in l + 1 .. r + 1 {
+        mut j := i
+        for j > l && arr[j] < arr[j - 1] {
+            arr[j], arr[j - 1] = arr[j - 1], arr[j]
+            j--
+        }
+    }
+}
+
+// sort helper to fix worst-case
+fn choose_pivot[T](mut arr []T, l int, r int) int {
+    // Use median-of-three to select pivot index
+    mid := l + (r - l) / 2
+    if arr[l] > arr[mid] {
+        arr[l], arr[mid] = arr[mid], arr[l]
+    }
+    if arr[l] > arr[r] {
+        arr[l], arr[r] = arr[r], arr[l]
+    }
+    if arr[mid] > arr[r] {
+        arr[mid], arr[r] = arr[r], arr[mid]
+    }
+    return mid
+}
+
+// helper fn to check shorted or not: true & false
+fn is_sorted[T](arr []T) bool {
+    for i in 0 .. arr.len - 1 {
+        if arr[i] > arr[i + 1] {
+            return false
+        }
+    }
+    return true
+}

@@ -1,0 +1,43 @@
+import rand
+
+const (
+    generate_length = 100 // to use minimum random number generate
+    genenerate_maximum_length = 1000 // to use maximum number generate
+)
+
+fn main() {
+    mut array := []int{} // new slice with no initial elements
+    for _ in 0..generate_length { // for loop to generate random numbers 100 <-> 1000
+        array << rand.intn(genenerate_maximum_length) or { 0 }
+    }
+    println('Random array length is: ${array.len}') // see length of array that generated above
+    println('Is `bubble` array sorted: no | ${is_sorted[int](array)}') // if not sorted then result will false
+    bubble_sort[int](mut array) // sorting now
+    println('Is now `bibble` array sorted: yes | ${is_sorted[int](array)}') // sorted, so result will true
+    println('')
+    println(array) // see all sorted output as array
+}
+
+// bubble sorting function
+fn bubble_sort[T](mut array []T) {
+    n := array.len
+    for i in 0..n-1 {
+        for j in 0..n-i-1 {
+            if array[j] > array[j+1] {
+		temp := array[j]
+                array[j] = array[j+1]
+                array[j+1] = temp
+            }
+        }
+    }
+}
+
+// it will return `true` and `false` if sorted or not
+fn is_sorted[T](array []T) bool {
+    for i in 0..array.len-1 {
+        if array[i] > array[i+1] {
+            return false
+        }
+    }
+    return true
+}

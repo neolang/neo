@@ -1,0 +1,8 @@
+fn main() {
+    a := [1, 5, 7, 0, 9]
+    println(a)    // [1, 5, 7, 0, 9]
+
+    // note: array counts start from 0..
+    println(a[1]) // 5
+    println(a[4]) // 9
+}

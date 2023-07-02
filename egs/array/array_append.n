@@ -1,0 +1,32 @@
+fn append_int() {
+    // using `mut` to mutable a
+    mut a := [1, 5, 7, 0, 9] // only integer or number
+
+    a << 3          // append single int at the end using `<<`
+    println(a)      // [1, 5, 7, 0, 9, 3]
+
+    a << [4, 6, 8]  // append array int at the end using `<<`
+    println(a)      // [1, 5, 7, 0, 9, 3, 4, 6, 8]
+
+    a[1] = 2        // append and replace by target
+    println(a)      // [1, 2, 7, 0, 9, 3, 4, 6, 8]
+}
+
+fn append_str() {
+    // using `mut` to mutable a
+    mut a := ['Raiyan', 'Masud', 'Nishe'] // only string using '' or ""
+
+    a << 'Abdullah'   // append single string at the end using `<<`
+    println(a)        // ['Raiyan', 'Masud', 'Nishe', 'Abdullah']
+
+    a << ['Masum', 'Shakib', 'Sifat']  // append array str at the end using `<<`
+    println(a)        // ['Raiyan', 'Masud', 'Nishe', 'Abdullah', 'Masum', 'Shakib', 'Sifat']
+
+    a[1] = 'Keya'     // append and replace by target
+    println(a)        // ['Raiyan', 'Keya', 'Nishe', 'Abdullah', 'Masum', 'Shakib', 'Sifat']
+}
+
+fn main() {
+    append_int()
+    append_str()
+}
