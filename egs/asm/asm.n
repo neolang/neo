@@ -1,0 +1,295 @@
+// if you want you can create amd fn to make codes shorter. For better understand did as follow:
+
+fn main() {
+    a := 100
+    b := 42
+
+    mut c := 0
+    mut d := 0
+    mut e := 0
+    mut f := 0
+    mut g := 0
+    mut h := 0
+    mut i := 0
+    mut j := 0
+    mut k := 0
+    mut l := 0
+    mut m := 0
+    mut n := 0
+    mut o := 0
+    mut p := 0
+    mut q := 0
+    mut r := 0
+    mut s := 0
+    mut t := 0
+    mut u := 0
+    mut v := 0
+    mut w := 0
+    mut x := 0
+    mut y := 0
+    mut z := 0
+
+     $if amd64 {
+
+        // a + b
+        asm amd64 {
+            mov eax, a
+            add eax, b
+            mov c, eax
+            ; = r (c) // output
+            ;   r (a) // input
+                r (b)
+        }
+
+        // a - b
+        asm amd64 {
+            mov eax, a
+            add eax, b
+            mov d, eax
+            ; = r (d)
+            ;   r (a)
+                r (b)
+        }
+
+        // a * b
+        asm amd64 {
+            mov eax, a
+            sub eax, b
+            mov e, eax
+            ; = r (e)
+            ;   r (a)
+                r (b)
+        }
+
+        // a ^ b
+        asm amd64 {
+            mov eax, a
+            mul b
+            mov f, eax
+            ; = r (f)
+            ;   r (a)
+                r (b)
+        }
+
+        // a & b
+        asm amd64 {
+            mov eax, a
+            xor eax, b
+            mov g, eax
+            ; = r (g)
+            ;   r (a)
+                r (b)
+        }
+
+        // a | b
+        asm amd64 {
+            mov eax, a
+            and eax, b
+            mov h, eax
+            ; = r (h)
+            ;   r (a)
+                r (b)
+        }
+
+        // a >> b
+        asm amd64 {
+            mov eax, a
+            or eax, b
+            mov i, eax
+            ; = r (i)
+            ;   r (a)
+                r (b)
+        }
+
+        // a << b
+        asm amd64 {
+            mov eax, a
+            shr eax, b
+            mov j, eax
+            ; = r (j)
+            ;   r (a)
+                r (b)
+        }
+
+        // a / b
+        asm amd64 {
+            mov eax, a
+            shl eax, b
+            mov k, eax
+            ; = r (k)
+            ;   r (a)
+                r (b)
+        }
+
+        // a % b
+        asm amd64 {
+            mov eax, a
+            cdq
+            idiv b
+            mov l, eax
+            ; = r (l)
+            ;   r (a)
+                r (b)
+        }
+
+        // a * b (signed)
+        asm amd64 {
+            mov eax, a
+            xor edx, edx
+            idiv b
+            mov m, eax
+            ; = r (m)
+            ;   r (a)
+                r (b)
+        }
+
+        // -a
+        asm amd64 {
+            mov eax, a
+            imul b
+            mov n, eax
+            ; = r (n)
+            ;   r (a)
+                r (b)
+        }
+
+        // ~a
+        asm amd64 {
+            mov eax, a
+            neg eax
+            mov o, eax
+            ; = r (o) // output
+                r (a)
+        }
+
+        // a + 1
+        asm amd64 {
+            mov eax, a
+            not eax
+            mov p, eax
+            ; = r (p)
+                r (a)
+        }
+
+        // a - 1
+        asm amd64 {
+            mov eax, a
+            inc eax
+            mov q, eax
+            ; = r (q)
+                r (a)
+        }
+
+        // a + b + carry
+        asm amd64 {
+            mov eax, a
+            dec eax
+            mov r, eax
+            ; = r (r)
+                r (a)
+        }
+
+        // a - b - borrow
+        asm amd64 {
+            mov eax, a
+            adc eax, b
+            mov s, eax
+            ; = r (s)
+            ;   r (a)
+                r (b)
+        }
+
+        // a - b (comparison)
+        asm amd64 {
+            mov eax, a
+            sbb eax, b
+            mov t, eax
+            ; = r (t)
+            ;   r (a)
+                r (b)
+        }
+
+        // a & b (test)
+        asm amd64 {
+            mov eax, a
+            cmp eax, b
+            mov u, eax
+            ; = r (u)
+            ;   r (a)
+                r (b)
+        }
+
+        // 0 (test)
+        asm amd64 {
+            mov eax, a
+            test eax, b
+            mov v, eax
+            ; = r (v)
+            ;   r (a)
+                r (b)
+        }
+
+        // a > b (set)
+        asm amd64 {
+            mov eax, a
+            setg al
+            mov w, eax
+            ; = r (w)
+                r (a)
+        }
+
+        // a < b (set)
+        asm amd64 {
+            mov eax, a
+            setl al
+            mov x, eax
+            ; = r (x)
+                r (a)
+        }
+
+        // a >= b (set)
+        asm amd64 {
+            mov eax, a
+            setge al
+            mov y, eax
+            ; = r (y)
+                r (a)
+        }
+
+        // a <= b (set)
+        asm amd64 {
+            mov eax, a
+            setle al
+            mov z, eax
+            ; = r (z)
+                r (a)
+        }
+    }
+
+    println("a: ${a}") // 100
+    println("b: ${b}") // 42
+    println("c: ${c}") // a + b
+    println("d: ${d}") // a - b
+    println("e: ${e}") // a * b
+    println("f: ${f}") // a ^ b
+    println("g: ${g}") // a & b
+    println("h: ${h}") // a | b
+    println("i: ${i}") // a >> b
+    println("j: ${j}") // a << b
+    println("k: ${k}") // a / b
+    println("l: ${l}") // a % b
+    println("m: ${m}") // a * b (signed)
+    println("n: ${n}") // -a
+    println("o: ${o}") // ~a
+    println("p: ${p}") // a + 1
+    println("q: ${q}") // a - 1
+    println("r: ${r}") // a + b + carry
+    println("s: ${s}") // a - b - borrow
+    println("t: ${t}") // a - b (comparison)
+    println("u: ${u}") // a & b (test)
+    println("v: ${v}") // 0 (test)
+    println("w: ${w}") // a > b (set)
+    println("x: ${x}") // a < b (set)
+    println("y: ${y}") // a >= b (set)
+    println("z: ${z}") // a <= b (set)
+}
