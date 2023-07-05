@@ -1,0 +1,17 @@
+fn main() {
+    mut fb := ''
+    for n in 1 .. 101 {
+        if n % 3 == 0 {
+            fb += 'Fizz'
+        }
+        if n % 5 == 0 {
+            fb += 'Buzz'
+        }
+        if fb == '' {
+            println(n)
+        } else {
+            println(fb)
+        }
+        fb = ''
+    }
+}
