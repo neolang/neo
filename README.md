@@ -1,4 +1,4 @@
-<img width="600px" height="50px" src="https://raw.githubusercontent.com/abdullahalraiyan/raiyan/main/neo.svg" alt="NEO"/>
+<img width="100%" height="50px" src="https://raw.githubusercontent.com/abdullahalraiyan/raiyan/main/neo.svg" alt="NEO"/>
 
 <h2>NEO Programming Language</h2>
 
