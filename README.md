@@ -29,6 +29,6 @@ fn main() {
 ```
 
 ## NEO Word Pronounce [en]
-[Pay Audio](./neo.wav)
+[Play Audio](https://neolang.nl/neo.wav)
 
 Thank you so much for choosing NeoLang.
