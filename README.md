@@ -1,4 +1,6 @@
-# The NEO Programming Language
+<img width="550px" height="100px" src="https://raw.githubusercontent.com/abdullahalraiyan/raiyan/main/neo.svg" alt="NEO"/>
+
+<h1>The NEO Programming Language</h1>
 
 NEO `νεο` Is a Statically Typed Programming Language With a Self-Compiler, Transpiled To C, and Uses `.n`/`.v` As File Extensions. It Is Fast, Easy, Safe and Designed For Developing Maintainable Software. The Compiler Is Self-Hosted and Written In `NEO` ItSelf. You Will Need a C Compiler Installed and Available In Your `PATH` To Be Able To Compile NEO Programs.
 
