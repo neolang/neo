@@ -1,7 +1,5 @@
-<img width="100%" height="50px" style="pointer-events: none; user-select: none;" src="https://raw.githubusercontent.com/abdullahalraiyan/raiyan/main/neo.svg" alt="NEO"/>
-
+<img src="https://raw.githubusercontent.com/abdullahalraiyan/raiyan/main/neo.svg" width="100%" height="50">
 <h2>NEO Programming Language</h2>
-
 NEO `νεο` Is a Statically Typed Programming Language With a Self-Compiler, Transpiled To C, and Uses `.n`/`.v` As File Extensions. It Is Fast, Easy, Safe and Designed For Developing Maintainable Software. The Compiler Is Self-Hosted and Written In `NEO` ItSelf. You Will Need a C Compiler Installed and Available In Your `PATH` To Be Able To Compile NEO Programs.
 
 The prefix [NEO](https://en.wiktionary.org/wiki/neo-), derived from the Ancient Greek [`νεο`](https://en.wiktionary.org/wiki/%CE%BD%CE%B5%CE%BF-)/[`νέος`](https://en.wiktionary.org/wiki/%CE%BD%CE%AD%CE%BF%CF%82) (néo/néos), meaning 'new/modern', encapsulates the spirit of innovation. It symbolizes our commitment to providing a cutting-edge, forward-thinking technology with the [`NEO`](https://github.com/neolang/neo) programming language. This language is designed for developers seeking modern, efficient, and robust software solutions. For more about the significance of 'NEO', visit [Wikipedia](https://en.wiktionary.org/wiki/neo-).
